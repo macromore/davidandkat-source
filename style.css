@@ -1,0 +1,14 @@
+* {
+    color: blue;
+}
+.the-title {
+    color: black;
+    font-weight: bold;
+}
+.awesome {
+    font-style: italic;
+    color: pink;
+}
+#heart {
+    font-size: 60px;
+}
