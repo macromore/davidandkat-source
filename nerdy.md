@@ -1,10 +1,11 @@
 ---
 title: Nerdy Test
 date: July 9, 2023
+lang: en
 header-includes:
 - \usepackage{amssym, amsmath}
+- <link rel="stylesheet" href="style.css"> </link>
 ---
-<!--<link rel="stylesheet" href="style.css"> </link>-->
 
 # A nerdy test of the Markdown language
 
