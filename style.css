@@ -1,5 +1,8 @@
 * {
     color: darkblue;
+    /* outline: 2px solid red; */
+    padding: 10px;
+    margin: 10px;
 }
 .the-title {
     color: black;
