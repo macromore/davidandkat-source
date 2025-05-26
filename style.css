@@ -1,4 +1,15 @@
+/* Set everything to border-box sizing. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
+    /* Set margin and padding to zero to override browser defaults. */
+    margin: 0;
+    padding: 0;
+
     color: darkblue;
     /* outline: 2px solid red; */
     /* padding: 10px; */
