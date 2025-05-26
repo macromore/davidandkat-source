@@ -1,14 +1,17 @@
 ---
 title: Nerdy Test
 date: July 9, 2023
+lang: en
 header-includes:
 - \usepackage{amssym, amsmath}
+- <link rel="stylesheet" href="style.css"> </link>
 ---
-<!--<link rel="stylesheet" href="style.css"> </link>-->
 
 # A nerdy test of the Markdown language
 
-$$ \int e^{\pi i} \, dx  = x e^{\pi i}$$
+Euler's Beautiful Equation: 
+
+$$ e^{\pi i} + 1 = 0$$
 
 ## I really don't know what to put in here.
 
@@ -17,4 +20,6 @@ $$ \int e^{\pi i} \, dx  = x e^{\pi i}$$
 - Baby stuff?
 - Dungeons and Dragons stuff?
 - Flying stuff?
-- Throwback: Fitness stuff?
+- Fitness stuff?
+
+[Home](index.html)
