@@ -36,10 +36,10 @@ h1.heading {
     display: flex;
 }
 
-p {
-    flex: 2;
-}
-
-.column {
+.nav-column {
     flex: 1;
+    border: 2px solid black;
+}
+.column {
+    flex: 2;
 }
