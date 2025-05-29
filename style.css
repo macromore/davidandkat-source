@@ -17,14 +17,10 @@
     width: 80%;
 }
 
-.the-title {
-    color: black;
-    font-weight: bold;
-}
-
 h1.heading {
     text-align: center;
 }
+
 .awesome {
     font-style: italic;
     color: hotpink;
