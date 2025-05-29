@@ -14,16 +14,36 @@
     /* outline: 2px solid red; */
     /* padding: 10px; */
     margin: 20px auto;
-    width: 90%;
+    width: 80%;
 }
+
 .the-title {
     color: black;
     font-weight: bold;
 }
+
+h1.heading {
+    text-align: center;
+}
 .awesome {
     font-style: italic;
-    color: pink;
+    color: hotpink;
 }
+
 #heart {
-    font-size: 60px;
+    margin-left: 50px;
+    font-size: 50px;
+    color: red;
+}
+
+.flex-container {
+    display: flex;
+}
+
+p {
+    flex: 2;
+}
+
+.column {
+    flex: 1;
 }
