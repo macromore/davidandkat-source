@@ -17,6 +17,10 @@
     width: 80%;
 }
 
+body {
+    min-width: 900px;
+}
+
 h1.heading {
     text-align: center;
 }
