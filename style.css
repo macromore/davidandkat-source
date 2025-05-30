@@ -14,9 +14,10 @@
     /* padding: 10px; */
 }
 
-.center, li, p{
+.center, li, p, table{
     margin: 20px auto;
     width: 80%;
+    max-width: 1500px;
 }
 
 body {
@@ -51,4 +52,14 @@ h1.heading {
 .column {
     padding: 20px;
     flex: 2;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+    min-width: 120px;
+    text-align: center;
 }
