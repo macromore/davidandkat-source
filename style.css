@@ -9,10 +9,12 @@
     /* Set margin and padding to zero to override browser defaults. */
     margin: 0;
     padding: 0;
-
     color: darkblue;
     /* outline: 2px solid red; */
     /* padding: 10px; */
+}
+
+.center, li, p{
     margin: 20px auto;
     width: 80%;
 }
@@ -43,7 +45,10 @@ h1.heading {
 .nav-column {
     flex: 1;
     border: 2px solid black;
+    padding: 20px;
 }
+
 .column {
+    padding: 20px;
     flex: 2;
 }
