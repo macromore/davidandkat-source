@@ -14,6 +14,13 @@
     /* padding: 10px; */
 }
 
+#heart {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 a {
     color: darkblue;
 }
@@ -34,13 +41,15 @@ h1.heading {
 
 .awesome {
     font-style: italic;
-    color: hotpink;
 }
 
+.subheading, .awesome {
+    color: hotpink;
+}
 #heart {
     margin-left: 50px;
     font-size: 50px;
-    color: red;
+    /* color: red; */
 }
 
 .flex-container {
