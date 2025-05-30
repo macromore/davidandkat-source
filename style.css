@@ -9,9 +9,17 @@
     /* Set margin and padding to zero to override browser defaults. */
     margin: 0;
     padding: 0;
-    color: darkgreen;
+    color: blue;
+    background-color: gray;
     /* outline: 2px solid red; */
     /* padding: 10px; */
+}
+
+#heart {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 a {
@@ -34,13 +42,15 @@ h1.heading {
 
 .awesome {
     font-style: italic;
-    color: hotpink;
 }
 
+.subheading, .awesome {
+    color: hotpink;
+}
 #heart {
     margin-left: 50px;
     font-size: 50px;
-    color: red;
+    /* color: red; */
 }
 
 .flex-container {
