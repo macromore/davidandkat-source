@@ -40,9 +40,10 @@ a {
 
 body {
     min-width: 900px;
+    font-size: 18px;
 }
 
-h1.heading {
+.heading {
     text-align: center;
 }
 
