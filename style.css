@@ -40,6 +40,7 @@ a {
 
 body {
     min-width: 900px;
+    font-size: 16px;
 }
 
 .heading {
