@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="prism.css">
+    <title>Hello World!</title>
+</head>
+<body>
+    <h1 class="heading">Your first x64 Assembly Program</h1>
+    <p>
+        I'll later add some boiler plate about how to make this work.
+        First we will look at the completed code of helloworld.asm.
+    </p>
+    <div class="center">
+    <pre style="background-color: lightgray; margin: 20px, auto; width: 80%;">
+    <code style="background-color: lightgray; margin: 20px, auto; width: 80%;" class="language-nasm">
+        section     .data
+            message     db      "Hello, world!",10,0
+            len         dq      $ - message - 1
+        section     .bss 
+        section     .text 
+            global      _start 
+        _start:
+            mov         rax, 1
+            mov         rdi, 1
+            mov         rsi, message
+            mov         rdx, len
+            syscall
+            mov         rax, 60
+            mov         rdi, 0
+            syscall
+    </code>
+    </pre></div>
+    <p>
+        At first something like this can be daunting. 
+        We will have to dissect it and discover how it works piece by piece. 
+        Structurally, the code is separated into sections, they are .data, .bss, and .text.
+        The first section .data is for initialized variables. 
+        The .bss section is for uninitialized variables, this makes a difference as to when the variables memory is assigned. 
+        Finally, the .text section is where the instructions for the program are located. 
+    </p>
+    <p>
+        The next feature to point out is the entry point, designated by global _start. 
+        This tells the linker that the tag _start, shown as _start:, is the entry point of the program, without this the linker will throw an error.
+    </p>
+    <p>
+        Moving on to the declaration of variables, the format follows {name}  d{size} {data}. 
+        The sizes here are b which stands for byte, and q which stands for quadword (8 bytes). 
+        The variable label actually points to the location in memory of the first letter in the string "H". 
+        The next thing to note here, is the use of "$" this represents the current address in memory, so "$ - message" is current address minus the location of the first letter in message. 
+        This gives the length of the string, I subtract 1 to remove the trailing zero. 
+    </p>
+    <p>
+        Let's now look at the instructions. We use two different instructions; mov and syscall.
+        mov copies the second argument into the first, in the Intel syntax we are using here, it is "target, source". 
+        syscall makes a system call to the Linux kernel.
+    </p>
+    <p>
+        We use several registers; rax, rdi, rsi, rdx. 
+        These are general purpose 64 bit registers that you will pretty much see in every program. 
+        We'll get into when to use which register and what they all are later.
+    </p>
+    <p>
+        I'll focus on the actual instructions used:
+    </p>
+    <div class="center">
+    <pre style="background-color: lightgray; margin: 20px, auto; width: 80%;">
+    <code style="background-color: lightgray; margin: 20px, auto; width: 80%;" class="language-nasm">
+        mov         rax, 1          ; write
+        mov         rdi, 1          ; to standard out
+        mov         rsi, message    ; location in memory of first character
+        mov         rdx, len        ; how many characters to write
+        syscall                     ; ask the kernel to write to standard out
+        mov         rax, 60         ; exit
+        mov         rdi, 0          ; successful execution
+        syscall                     ; ask the kernel to exit
+    </code>
+    </pre></div>
+    <p>
+        You can put this program as written at the top of the page in a text file named "hello.asm". 
+        Then run the following two commands: 
+        <br>
+        $ ld hello.o
+        <br>
+        $ nasm -f elf64 hello.asm
+    </p>
+    <p>
+        Hopefully, that makes some sense. 
+        I'll revise this page and work on the formatting. 
+    </p>
+    <p>
+        <a href="../asm.html">Back</a>
+        <br>
+        <a href="../index.html">Home</a>
+    </p>
+    <script src="prism.js"></script>
+</body>
+</html>

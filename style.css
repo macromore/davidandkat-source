@@ -11,7 +11,7 @@
     padding: 0;
 
     color: blue;
-    background-color: gray;
+    background-color: lightgray;
     font-family: monospace;
     /* outline: 2px solid red; */
     /* padding: 10px; */
@@ -45,6 +45,7 @@ body {
 
 .heading {
     text-align: center;
+    color: black;
 }
 
 .awesome {
